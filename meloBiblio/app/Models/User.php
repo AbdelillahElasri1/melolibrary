@@ -41,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    protected $with = ['musics'];
+    public function musics()
+    {
+        return $this->hasMany(Music::class);
+    }
 }

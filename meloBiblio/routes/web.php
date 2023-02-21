@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// Route :: get ('emp/{id}', function ($id) {
+//     // Employe::find($id);
+//     echo 'Emp '.$id;
+// })->whereNumber('id'); 
+Route::get('/hello', function() {
+    return response('<h1>hello world</h1>');
+});
